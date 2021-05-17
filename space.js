@@ -29,3 +29,18 @@ function drawSpace() {
     }
   }
 }
+
+function assertFilled(x1, y1, z1, x2, y2, z2) {
+  for (let i = x1; i <= x2; i++) {
+    for (let j = y1; j <= y2; j++) {
+      for (let k = z1; k <= z2; k++) {
+        if (space[i][j][k] != 1) {
+          console.log(i, j, k);
+          return false;
+        }
+      }
+    }
+  }
+
+  return true;
+}

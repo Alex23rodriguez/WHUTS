@@ -84,3 +84,7 @@ copy.onclick = () => {
 
 let paste = document.getElementById("paste-btn");
 paste.onclick = () => clipboard.map(pasteShape);
+
+document.getElementById("transparency-slider").oninput = (e) => {
+  transparency = Number(e.target.value);
+};
