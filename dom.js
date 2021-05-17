@@ -69,6 +69,7 @@ remove.onclick = () => {
     if (s.selected) {
       document.getElementById(s.id).remove();
       del.push(s);
+      addShapeToSpace(s, false);
     }
   }
   shapes = shapes.filter((s) => !del.includes(s));

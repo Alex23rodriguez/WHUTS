@@ -102,36 +102,14 @@ function draw() {
 
   // objects
   strokeWeight(0.5);
-  stroke(0);
-
-  box(1, 1, 1);
-
-  for (let s of shapes) s.draw();
-  /*
-  push();
-  translate(50, 50, 0);
+  stroke(255);
   fill(255);
-  box(50, 50, 25);
-  pop();
+  sphere(0.5);
+  stroke(0);
+  strokeWeight(1);
 
-  push();
-  translate(-50, -50, 0);
-  fill(255, 0, 128);
-  box(50, 50, 25);
-  pop();
-
-  push();
-  translate(+50, -50, 0);
-  fill(0, 128, 255);
-  box(50, 50, 25);
-  pop();
-
-  push();
-  translate(-50, +50, 0);
-  fill(255, 255, 0);
-  box(50, 50, 25);
-  pop();
-  */
+  drawSpace();
+  for (let s of shapes) s.draw();
 }
 
 function resetCameraView() {

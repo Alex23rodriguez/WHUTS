@@ -1,5 +1,3 @@
-var SIZE = 30;
-
 function Unfold(shape, pos = [0, 0, 0]) {
   this.color;
   // arr is a 3D array
@@ -79,21 +77,46 @@ function Unfold(shape, pos = [0, 0, 0]) {
 }
 
 function moveSelectedShapes(arr) {
-  shapes.filter((s) => s.selected).map((s) => s.move(arr));
+  let selected = shapes.filter((s) => s.selected);
+  selected.map((shape) => addShapeToSpace(shape, false));
+  selected.map((s) => s.move(arr));
+  selected.map((shape) => addShapeToSpace(shape));
 }
 
 function rotateXSelectedShapes(counterclockwise) {
-  shapes.filter((s) => s.selected).map((s) => s.rotateX(counterclockwise));
+  shapes
+    .filter((s) => s.selected)
+    .map((s) => {
+      addShapeToSpace(s, false);
+      s.rotateX(counterclockwise);
+      addShapeToSpace(s);
+    });
 }
 
 function rotateYSelectedShapes(counterclockwise) {
-  shapes.filter((s) => s.selected).map((s) => s.rotateY(counterclockwise));
+  shapes
+    .filter((s) => s.selected)
+    .map((s) => {
+      addShapeToSpace(s, false);
+      s.rotateY(counterclockwise);
+      addShapeToSpace(s);
+    });
 }
-
 function rotateZSelectedShapes(counterclockwise) {
-  shapes.filter((s) => s.selected).map((s) => s.rotateZ(counterclockwise));
+  shapes
+    .filter((s) => s.selected)
+    .map((s) => {
+      addShapeToSpace(s, false);
+      s.rotateZ(counterclockwise);
+      addShapeToSpace(s);
+    });
 }
-
 function mirrorSelectedShapes() {
-  shapes.filter((s) => s.selected).map((s) => s.mirror());
+  shapes
+    .filter((s) => s.selected)
+    .map((s) => {
+      addShapeToSpace(s, false);
+      s.mirror();
+      addShapeToSpace(s);
+    });
 }

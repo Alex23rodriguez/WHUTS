@@ -1,11 +1,14 @@
 function addNewShape(pos) {
-  addControl(_spawnShape(pos));
+  let shape = _spawnShape(pos);
+  addControl(shape);
+  addShapeToSpace(shape);
 }
 
 function pasteShape(shape) {
   let s = shape.copy();
   shapes.push(s);
   addControl(s);
+  addShapeToSpace(s);
 }
 
 function _spawnShape(pos) {
