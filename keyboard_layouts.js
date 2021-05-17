@@ -1,0 +1,33 @@
+var QUERTY = {
+  moveLeft: "a",
+  moveRight: "d",
+  moveUp: "w",
+  moveDown: "s",
+  moveBack: "q",
+  moveFront: "e",
+  rotateXcw: "i",
+  rotateXccw: "k",
+  rotateYcw: "j",
+  rotateYccw: "l",
+  rotateZcw: "o",
+  rotateZccw: "u",
+  mirror: ",",
+  resetCameraView: " ",
+};
+
+var COLEMAK = {
+  moveLeft: "a",
+  moveRight: "s",
+  moveUp: "w",
+  moveDown: "r",
+  moveBack: "q",
+  moveFront: "f",
+  rotateXcw: "u",
+  rotateXccw: "e",
+  rotateYcw: "n",
+  rotateYccw: "i",
+  rotateZcw: "y",
+  rotateZccw: "l",
+  mirror: ",",
+  resetCameraView: " ",
+};

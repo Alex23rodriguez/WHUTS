@@ -1,6 +1,7 @@
 var shapes = [];
 
 var clipboard = [];
+var transparency = 100;
 
 var easycam;
 
@@ -50,46 +51,46 @@ function windowResized() {
 
 function keyPressed() {
   switch (key) {
-    case " ":
+    case KEYMAP.resetCameraView:
       resetCameraView();
       break;
-    case "a":
+    case KEYMAP.moveLeft:
       moveSelectedShapes([-1, 0, 0]);
       break;
-    case "s":
+    case KEYMAP.moveRight:
       moveSelectedShapes([1, 0, 0]);
       break;
-    case "r":
+    case KEYMAP.moveDown:
       moveSelectedShapes([0, 1, 0]);
       break;
-    case "w":
+    case KEYMAP.moveUp:
       moveSelectedShapes([0, -1, 0]);
       break;
-    case "q":
+    case KEYMAP.moveBack:
       moveSelectedShapes([0, 0, -1]);
       break;
-    case "f":
+    case KEYMAP.moveFront:
       moveSelectedShapes([0, 0, 1]);
       break;
-    case "n":
-      rotateYSelectedShapes();
-      break;
-    case "i":
-      rotateYSelectedShapes(true);
-      break;
-    case "u":
+    case KEYMAP.rotateXcw:
       rotateXSelectedShapes();
       break;
-    case "e":
+    case KEYMAP.rotateXccw:
       rotateXSelectedShapes(true);
       break;
-    case "l":
-      rotateZSelectedShapes(true);
+    case KEYMAP.rotateYcw:
+      rotateYSelectedShapes();
       break;
-    case "y":
+    case KEYMAP.rotateYccw:
+      rotateYSelectedShapes(true);
+      break;
+    case KEYMAP.rotateZcw:
       rotateZSelectedShapes();
       break;
-    case ",":
+    case KEYMAP.rotateZccw:
+      rotateZSelectedShapes(true);
+      break;
+    case KEYMAP.mirror:
       mirrorSelectedShapes();
     default:
     // code block
