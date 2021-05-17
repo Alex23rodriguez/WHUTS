@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.easycam.min.js"></script>
+
+    <title>WHUTS</title>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div id="left-side">
+        <div id="canvas"></div>
+      </div>
+      <div id="right-side" style="flex: 30%; margin: 0px 20px">
+        <div style="display: flex; justify-content: center">
+          <div style="margin-bottom: 10px">
+            <button id="remove-btn">-</button>
+            <button id="add-btn">+</button>
+            <button id="copy-btn">copy</button>
+            <button id="paste-btn">paste</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dom.js"></script>
+    <script src="unfold.js"></script>
+    <script src="util.js"></script>
+    <script src="shapes.js"></script>
+    <script src="parameters.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
